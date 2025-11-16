@@ -8,7 +8,7 @@ Quick deployment service with separate infrastructure and service deployments.
 - `.github/workflows/` - CI/CD pipelines
 
 ## Deployment
-- Push to `main` branch deploys both infrastructure and service
+- Push to `master` branch deploys both infrastructure and service
 - Infrastructure changes: modify files in `infrastructure/`
 - Service changes: modify files in `service/`
 
