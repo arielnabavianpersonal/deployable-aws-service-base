@@ -7,7 +7,6 @@ on:
       - main
     paths:
       - 'service/**'
-      - '!infrastructure/**'
 
 jobs:
   deploy-service:

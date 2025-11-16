@@ -24,10 +24,15 @@ export class ApiServiceStack extends cdk.Stack {
     });
 
     const integration = new apigateway.LambdaIntegration(apiLambda);
-    api.root.addMethod('ANY', integration);
+    api.root.addMethod('ANY', integration, {
+      authorizationType: apigateway.AuthorizationType.IAM,
+    });
     api.root.addProxy({
       defaultIntegration: integration,
       anyMethod: true,
+      defaultMethodOptions: {
+        authorizationType: apigateway.AuthorizationType.IAM,
+      },
     });
 
     new cdk.CfnOutput(this, 'ApiUrl', {
