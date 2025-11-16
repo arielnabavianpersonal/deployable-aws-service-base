@@ -19,7 +19,7 @@ public class ApiHandler implements RequestHandler<APIGatewayProxyRequestEvent, A
         String method = request.getHttpMethod();
         
         Map<String, Object> response = new HashMap<>();
-        response.put("message", "Hello from Lambda!");
+        response.put("message", "Hello from Lambda! Testing with github actions.");
         response.put("path", path);
         response.put("method", method);
         
